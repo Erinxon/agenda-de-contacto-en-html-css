@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Agenda de contactos</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container navbar-container">
+            <a class="navbar-brand" href="#">Agenda de contacto</a>
+        </div>
+    </nav>
+
+    <section class="container mt-4">
+        <div class="row justify-content-between mt-4">
+            <div class="col-lg-4 mt-3 mb-3">
+                <form class="form-search" id="formulario">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar Contacto" id="inputTexto">
+                </form>
+            </div>
+            <div class="col-lg-3 mt-3 mb-3">
+                <div class="agregar-contacto">
+                    <a href="#" class="btn-agregar" data-toggle="modal" data-target="#abrir-modal">
+                        <i class="fas fa-plus-circle"></i>
+                        Agregar Nuevo Contacto
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-12 mt-3 mb-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Erinxon</td>
+                            <td>Santana</td>
+                            <td>809-494-8930</td>
+                            <td>
+                                <a href="#" class="btn-editar" id="editar">
+                                    <i class="far fa-edit"></i>
+                                    Editar
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" class="btn-eliminar" id="eliminar">
+                                    <i class="fas fa-trash-alt"></i>
+                                    Eliminar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="modal fade" id="abrir-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Agregar Nuevo Contacto</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" placeholder="Nombre">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <input type="text" class="form-control" placeholder="Apellido">
+                                        </div>
+                                        <div class="col-lg-12 mt-3">
+                                            <input type="text" class="form-control" placeholder="Numero de telefono">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" id="guardar-contacto">Guardar
+                                    Contacto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7de94cbd13.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
